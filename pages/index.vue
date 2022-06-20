@@ -36,6 +36,8 @@
             id: randomId,
             name: newWorkspaceName.value
         })
+
+        newWorkspaceName.value = ''
     }
 </script>
 
