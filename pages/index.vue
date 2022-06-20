@@ -10,16 +10,12 @@
 </template>
 
 <script setup lang="ts">
-    definePageMeta({
-        layout: 'main-layout'
-    })
-
     const newWorkspaceName = ref<string>('');
 
     const workspaces = useWorkspaces();
 
     const createWorkspace = () => {
-        const randomId = Math.floor(Math.random() * 100);
+        const randomId = Math.floor(Math.random() * 100).toString();
 
         workspaces.value.push({
             id: randomId,

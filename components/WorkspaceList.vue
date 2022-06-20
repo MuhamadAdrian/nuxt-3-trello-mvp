@@ -1,7 +1,7 @@
 <template>
     <ul class="workspace-list">
         <li class="workspace-card" v-for="workspace in workspaces" :key="workspace.id">
-            {{ workspace.name }}
+            <NuxtLink :to="`/workspace/${workspace.id}`">{{ workspace.name }}</NuxtLink>
         </li>
     </ul>
 </template>
