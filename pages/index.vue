@@ -3,7 +3,7 @@
     <h1>Home Page</h1>
     <h2>Recently Viewed</h2>
     <h3>Workspace</h3>
-    <input type="text" v-model="newWorkspaceName">
+    <input type="text" v-model="newWorkspaceName" @keyup.enter="createWorkspace">
     <button @click="createWorkspace">create a Workspace</button>
     <ul class="workspace-list">
         <li class="workspace-card" v-for="workspace in workspaces" :key="workspace.id">
